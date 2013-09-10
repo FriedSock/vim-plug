@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>vim-plug by junegunn</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>vim-plug</h1>
+        <p>A single-file Vim plugin manager</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/junegunn/vim-plug" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/junegunn/vim-plug/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/junegunn/vim-plug/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="vim-plug" class="anchor" href="#vim-plug"><span class="octicon octicon-link"></span></a>vim-plug</h1>
+
+<p>Vim plugin manager.</p>
+
+<h3>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h3>
+
+<p>Because I can?</p>
+
+<h3>
+<a name="pros" class="anchor" href="#pros"><span class="octicon octicon-link"></span></a>Pros.</h3>
+
+<ul>
+<li>Marginally simpler</li>
+<li>Parallel installation/update (requires +ruby)</li>
+<li>Alternative directory structure: user/repo/branch</li>
+</ul><h3>
+<a name="cons" class="anchor" href="#cons"><span class="octicon octicon-link"></span></a>Cons.</h3>
+
+<p>Everything else.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>Download plug.vim and put it in ~/.vim/autoload</p>
+
+<div class="highlight highlight-sh"><pre>mkdir -p ~/.vim/autoload
+curl -fL -o ~/.vim/autoload/plug.vim <span class="se">\</span>
+  https://raw.github.com/junegunn/vim-plug/master/plug.vim
+</pre></div>
+
+<p>Edit your .vimrc</p>
+
+<div class="highlight highlight-vim"><pre><span class="k">call</span> plug#init<span class="p">()</span>
+
+Plug <span class="s1">'junegunn/seoul256'</span>
+Plug <span class="s1">'junegunn/vim-easy-align'</span>
+<span class="c">" Plug 'user/repo', 'branch_or_tag'</span>
+<span class="c">" ...</span>
+</pre></div>
+
+<p>Then :PlugInstall to install plugins. (Default plugin directory: <code>~/.vim/plugged</code>)</p>
+
+<p>You can change the location of the plugins with <code>plug#init(path)</code> call.</p>
+
+<h3>
+<a name="commands" class="anchor" href="#commands"><span class="octicon octicon-link"></span></a>Commands</h3>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>PlugInstall [#threads]</td>
+<td>Install plugins</td>
+</tr>
+<tr>
+<td>PlugUpdate  [#threads]</td>
+<td>Install or update plugins</td>
+</tr>
+<tr>
+<td>PlugClean</td>
+<td>Remove unused directories</td>
+</tr>
+<tr>
+<td>PlugUpgrade</td>
+<td>Upgrade vim-plug itself</td>
+</tr>
+</tbody>
+</table><p>(Default #threads = Number of plugins)</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/junegunn">junegunn</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
