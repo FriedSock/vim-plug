@@ -45,23 +45,23 @@
 <p>A single-file Vim plugin manager.</p>
 
 <h3>
-<a name="whwhy" class="anchor" href="#whwhy"><span class="octicon octicon-link"></span></a>Wh..why?</h3>
-
-<p>... because I can?</p>
-
-<h3>
 <a name="pros" class="anchor" href="#pros"><span class="octicon octicon-link"></span></a>Pros.</h3>
 
 <ul>
 <li>Easier to setup</li>
 <li>Parallel installation/update (requires +ruby)</li>
-<li>Alternative directory structure: user/repo/branch</li>
+<li>Alternative directory structure: user/repo
+
+<ul>
+<li>Make it easier to switch plugins of the same name from different authors</li>
+</ul>
+</li>
 </ul><h3>
 <a name="cons" class="anchor" href="#cons"><span class="octicon octicon-link"></span></a>Cons.</h3>
 
-<p>Everything else.</p>
-
-<h3>
+<ul>
+<li>Everything else</li>
+</ul><h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
 <p>Download plug.vim and put it in ~/.vim/autoload</p>
@@ -73,12 +73,14 @@ curl -fLo ~/.vim/autoload/plug.vim
 
 <p>Edit your .vimrc</p>
 
-<div class="highlight highlight-vim"><pre><span class="k">call</span> plug#init<span class="p">()</span>
+<div class="highlight highlight-vim"><pre><span class="k">call</span> plug#begin<span class="p">()</span>
 
 Plug <span class="s1">'junegunn/seoul256'</span>
 Plug <span class="s1">'junegunn/vim-easy-align'</span>
 <span class="c">" Plug 'user/repo', 'branch_or_tag'</span>
 <span class="c">" ...</span>
+
+<span class="k">call</span> plug#<span class="k">end</span><span class="p">()</span>
 </pre></div>
 
 <p>Then :PlugInstall to install plugins. (Default plugin directory: <code>~/.vim/plugged</code>)</p>
@@ -112,6 +114,29 @@ Plug <span class="s1">'junegunn/vim-easy-align'</span>
 </tr>
 </tbody>
 </table><p>(Default number of threads = <code>g:plug_threads</code> or 16)</p>
+
+<h3>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h3>
+
+<h4>
+<a name="parallel-installation" class="anchor" href="#parallel-installation"><span class="octicon octicon-link"></span></a>Parallel installation</h4>
+
+<p><img src="https://raw.github.com/junegunn/vim-plug/master/gif/pi.gif" alt=""></p>
+
+<h4>
+<a name="serial-installation" class="anchor" href="#serial-installation"><span class="octicon octicon-link"></span></a>Serial installation</h4>
+
+<p><img src="https://raw.github.com/junegunn/vim-plug/master/gif/si.gif" alt=""></p>
+
+<h4>
+<a name="parallel-update" class="anchor" href="#parallel-update"><span class="octicon octicon-link"></span></a>Parallel update</h4>
+
+<p><img src="https://raw.github.com/junegunn/vim-plug/master/gif/pu.gif" alt=""></p>
+
+<h4>
+<a name="serial-update" class="anchor" href="#serial-update"><span class="octicon octicon-link"></span></a>Serial update</h4>
+
+<p><img src="https://raw.github.com/junegunn/vim-plug/master/gif/su.gif" alt=""></p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/junegunn">junegunn</a></p>
@@ -119,6 +144,16 @@ Plug <span class="s1">'junegunn/vim-easy-align'</span>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44066125-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
