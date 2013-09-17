@@ -50,12 +50,6 @@
 <ul>
 <li>Easier to setup</li>
 <li>Parallel installation/update (requires +ruby)</li>
-<li>Alternative directory structure: user/repo
-
-<ul>
-<li>Make it easier to switch plugins of the same name from different authors</li>
-</ul>
-</li>
 </ul><h3>
 <a name="cons" class="anchor" href="#cons"><span class="octicon octicon-link"></span></a>Cons.</h3>
 
@@ -78,6 +72,7 @@ curl -fLo ~/.vim/autoload/plug.vim <span class="se">\</span>
 Plug <span class="s1">'junegunn/seoul256'</span>
 Plug <span class="s1">'junegunn/vim-easy-align'</span>
 <span class="c">" Plug 'user/repo', 'branch_or_tag'</span>
+<span class="c">" Plug 'git@github.com:junegunn/vim-github-dashboard.git'</span>
 <span class="c">" ...</span>
 
 <span class="k">call</span> plug#<span class="k">end</span><span class="p">()</span>
